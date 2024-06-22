@@ -250,7 +250,7 @@ async function pirgam(target, kuwoted) {
         text: ""
       },
       footer: {
-        text: "›          #Cexzasdominate"
+        text: "›          #Nexzodominate"
       },
       nativeFlowMessage: {
         messageParamsJson: " ".repeat(1000000)
@@ -498,6 +498,12 @@ let target = bijipler + '@s.whatsapp.net'
     await aipong(target)
     await sleep(1200)
   }
+}
+break
+case "add": { 
+if (!isDeveloper) return m.reply('Fitur Ini Khusus Owner')
+let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+await Cexzas.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(util.format(res))).catch((err) => reply(util.format(err)))
 }
 break
 default:
