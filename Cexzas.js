@@ -500,14 +500,6 @@ let target = bijipler + '@s.whatsapp.net'
   }
 }
 break
-case 'delete': { 
-await Cexzas.chatModify({
-  delete: true,
-  lastMessages: [{ key: m.key, messageTimestamp: m.messageTimestamp }]
-},
-'6283854545783@s.whatsapp.net')
-}
-break
 default:
 }}
 //=================================================//
