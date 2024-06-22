@@ -68,7 +68,16 @@ const Cexzas = CexzasConnect({
     syncFullHistory: true, 
     retryRequestDelayMs : 50000, 
     maxMsgRetryCount : 50000, 
-    generateHighQualityLinkPreview: true,
+    generateHighQualityLinkPreview: false, 
+    getMessage: async (key) => {
+            if (store) {
+                const msg = await store.loadMessage(key.remoteJid, key.id)
+                return msg.message || undefined
+            }
+            return {
+                conversation: "Cheems Bot Here!"
+            }
+        },
     resolveMsgBuffer,
 })
 
