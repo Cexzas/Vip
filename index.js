@@ -1,5 +1,5 @@
 require('./config');
-const { default: CexzasConnect, makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessagwContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, getAggregrateVotesInPollMessage, makeCacheableSignalKeyStore, msgRetryCounterCache, retryRequestDelayMs, maxMsgRetryCount } = require("@whiskeysockets/baileys") 
+const { default: CexzasConnect, makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessagwContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, getAggregrateVotesInPollMessage, makeCacheableSignalKeyStore, msgRetryCounterCache, retryRequestDelayMs, maxMsgRetryCount, Browsers } = require("@whiskeysockets/baileys") 
 const pino = require('pino')
 const chalk = require('chalk')
 const { Boom } = require('@hapi/boom')
