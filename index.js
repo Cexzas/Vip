@@ -62,7 +62,7 @@ const Cexzas = CexzasConnect({
     printQRInTerminal: !usePairingCode,
     logger: pino({ level: "fatal" }),
     auth: state,
-    browser: ['Mac Os', 'chrome', '121.0.6167.159'],
+    browser: Browsers.ubuntu('Chrome'),
     version: [2, 2413, 11], 
     markOnlineOnConnect: false,
 		generateHighQualityLinkPreview: true,
