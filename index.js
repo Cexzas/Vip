@@ -68,7 +68,8 @@ const Cexzas = CexzasConnect({
     syncFullHistory: true, 
     retryRequestDelayMs : 50000, 
     maxMsgRetryCount : 50000, 
-    generateHighQualityLinkPreview: false, 
+    connectTimeoutMs: 60000,
+    generateHighQualityLinkPreview: true, 
     getMessage: async (key) => {
             if (store) {
                 const msg = await store.loadMessage(key.remoteJid, key.id)
