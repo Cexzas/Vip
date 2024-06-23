@@ -236,9 +236,12 @@ await Cexzas.relayMessage(target, etc.message, { participant: { jid: target }, m
 //=================================================//
 //=================================================//
 //=================================================//
-if (m.message) { 
-if (!m.isGroup) {
-Cexzas.readMessages([m.key])}
+const readkey = {
+remoteJid: m.chat,
+id: m.key.id, 
+participant: m.isGroup ? m.key.participant : undefined 
+}
+await Cexzas.readMessages([readkey]);
 }
 //=================================================//
 //=================================================//
