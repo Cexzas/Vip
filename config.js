@@ -8,7 +8,7 @@ global.d = new Date()
 global.calender = d.toLocaleDateString('id')
 
 global.prefa = ['','!','.',',','🐤','🗿']
-global.owner = ['6283854545783']
+global.owner = ['6283854545783','6285718138321']
 global.ownMain = '6283854545783'
 global.NamaOwner = 'CexzasElitee'
 global.sessionName = 'cexzassession'
